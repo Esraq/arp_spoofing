@@ -1,0 +1,31 @@
+# Import Library
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Define Data
+
+team = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N']
+Fps = [1, 1.5, 1,1.5,1,1.5,2,1.5,1,1.5,2,2.5,2,1.5]
+Packet = [50,51,52,53,54,55,56,55,58,59,60,61,62,63]
+Delay=[99,101,103,105,107,109,111,109,111,115,117,119,121,123]
+
+x_axis = np.arange(len(team))
+
+# Multi bar Chart
+
+plt.bar(x_axis +0.20, Fps, width=0.2, label = 'Fps')
+plt.bar(x_axis +0.20*2, Packet, width=0.2, label = 'Packet')
+plt.bar(x_axis +0.20*3, Delay, width=0.2, label = 'Delay')
+
+# Xticks
+
+plt.xticks(x_axis,team)
+
+# Add legend
+
+plt.legend()
+
+# Display
+
+plt.show()

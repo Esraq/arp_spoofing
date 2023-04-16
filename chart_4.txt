@@ -1,0 +1,22 @@
+import matplotlib.pyplot as plt
+
+# Data
+packet_length = [41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79]
+packet_count = [20,10,10,20,15,10,10,10,15,10,10,10,15,15,25,10,10,15,15,20]
+packet_delivery_rate=[48,23,22,42,30,19,18,18,26,25,16,15,15,14,21,22,34,13,12,18]
+burst_rate=[3.75,1.87,1.87,2.81,1.87,1.87,1.87,2.81,2.81,1.87,1.87,1.87,1.87,2.81,2.81,4.68,1.87,1.87,2.81,2.81]
+
+# Plotting
+plt.bar(packet_length, packet_count, width=1.5, alpha=0.5, color='blue', label='Packet Count')
+plt.bar(packet_length, packet_delivery_rate, width=1.5, alpha=0.5, color='red', label='Packet Delivery Rate')
+plt.bar(packet_length, burst_rate, width=1.5, alpha=0.5, color='green', label='Burst Rate')
+
+# Customize the chart
+plt.title("Packet Data Analysis")
+plt.xlabel("Packet Length")
+plt.ylabel("Values")
+plt.legend(loc='best')
+plt.grid(True)
+
+# Show the chart
+plt.show()

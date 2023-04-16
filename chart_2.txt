@@ -1,0 +1,31 @@
+# Import Library
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Define Data
+
+team = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N']
+Sniffed_Timing_Attack = [1161,1161,1161,1161,1507,1507,1507,1815,1815,1815,1510,1510,1507,1507]
+Sniffed_Packet =[166,126,116,96,106,136,146,156,86,76,116,126,166,156]
+Sniffed_Bits=[336,330,310,325,295,315,320,300,305,285,307,317,335,304]
+
+x_axis = np.arange(len(team))
+
+# Multi bar Chart
+
+plt.bar(x_axis +0.20, Sniffed_Timing_Attack, width=0.2, label = 'Sniffed_Timing_Attack')
+plt.bar(x_axis +0.20*2, Sniffed_Packet, width=0.2, label = 'Sniffed_Packet')
+plt.bar(x_axis +0.20*3, Sniffed_Bits, width=0.2, label = 'Sniffed_Bits')
+
+# Xticks
+
+plt.xticks(x_axis,team)
+
+# Add legend
+
+plt.legend()
+
+# Display
+
+plt.show()
